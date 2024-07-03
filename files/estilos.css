@@ -1,0 +1,284 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+	color: red;
+}
+hr {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 0px;
+  background-color: #FFFFFF;
+  border-color: transparent;
+}
+.menu-lateral {
+  width: 250px;
+  height: 100%;
+  background-color: #3D3D3D;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  z-index: 3;
+  color: #EDEDED;
+}
+.menu-lateral a {
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #EDEDED;
+  display: block;
+  transition: 0.3s;
+}
+.menu-lateral a:hover {
+  color: #EDEDED;
+}
+.contedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.contedor2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.menu-lateral h2 {
+  font-size: 20px;
+}
+.MisPuntos summary {
+  padding: 20px;
+}
+.ListaPar li.selected {
+  background-color: #EDEDED;
+}
+button, input, select {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background-color: #3D3D3D;
+  color: #EDEDED;
+  cursor: pointer;
+  width: 150px;
+}
+button:hover {
+  background-color: #333333;
+}
+.centered-content {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #E8E8E8;
+  width: 600px;
+}
+.Logeo-body, .contenido {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  margin: 10px;
+  padding: 120px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.Logeo-body::before, .contenido::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("imagenes/fondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+.form-group {
+  position: relative;
+  margin: 12px 0;
+}
+.form-group input {
+  padding: 8px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: #ACACAC solid 2px;
+  background-color: transparent;
+  color: #3D3D3D;
+  transition: 0.15s all ease;
+}
+.form-group input:focus {
+  border-color: #EEEEEE;
+}
+.form-group input::placeholder {
+  color: transparent;
+}
+.form-group .form-label {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #ACACAC;
+  pointer-events: none;
+  transition: 0.15s all ease;
+}
+.form-label {
+  margin-left: 180px;
+}
+.form-group input:focus + .form-label, .form-group input:not(:placeholder-shown) + .form-label {
+  transform: translate(8px, -12px);
+  background-color: #E8E8E8;
+  font-size: 14px;
+  color: #000000;
+}
+.icono {
+  width: 200px;
+}
+.glow-on-hover {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #EDEDED;
+  background: #3D3D3D;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+.glow-on-hover:active {
+  color: #000;
+}
+.glow-on-hover:active:after {
+  background: transparent;
+}
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #3D3D3D;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+table tbody tr:hover {
+  background-color: #939393;
+  width: 150px;
+}
+table {
+  color: #EDEDED;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px;
+}
+table thead th {
+  background-color: #3D3D3D;
+}
+table tbody, tr {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table th, table td {
+  width: 100px;
+  height: 30px;
+}
+.contenido {
+  margin-left: 250px;
+  height: 100%;
+  color: #EDEDED;
+}
+.boton-icono {
+  background-color: #3D3D3D;
+  color: #EDEDED;
+  border: none;
+  padding: 10px 25px 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  width: 30px;
+  margin: 10px;
+}
+.icono-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.formulario {
+  background-color: #EDEDED;
+  border-radius: 5px;
+}
+.formulario input[type="date"], .formulario input[type="time"] {
+  width: 220px;
+  text-align: center;
+}
+.formulario h3, li {
+  color: #3D3D3D;
+}
+#tbljueces select, #tblparticipantes select, #tblcarreras select {
+  background-color: #3D3D3D;
+}
+
+#VerCarreras td:first-child,#VerCarreras th:first-child {
+    width: 120px;
+  }
+.ListaPcon li.selected {
+  background-color: #808080;
+}
+.carrera,
+.participante {
+  display: inline-block;
+  vertical-align: top; /* Alinear al principio para evitar alineación base */
+  margin-right: 20px; /* Espacio entre los divs, ajusta según sea necesario */
+}
